@@ -7,5 +7,9 @@ defmodule GetSetWeb.Router do
 
   scope "/api", GetSetWeb do
     pipe_through :api
+
+    get "/", GssController, :index
+    get "/key/:key", GssController, :get
+    put "/key/:key", GssController, :set
   end
 end
