@@ -10,6 +10,7 @@ defmodule GetSet.Application do
     children = [
       # Start the endpoint when the application starts
       supervisor(GetSetWeb.Endpoint, []),
+      {Redix, [[], [name: :redix_conn]]},
       # Start your own worker by calling: GetSet.Worker.start_link(arg1, arg2, arg3)
       # worker(GetSet.Worker, [arg1, arg2, arg3]),
     ]
