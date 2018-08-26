@@ -1,4 +1,4 @@
-defmodule GetSetWeb.GssController do
+defmodule GetSetWeb.RedisController do
   use GetSetWeb, :controller
 
   def index(conn, _params) do
